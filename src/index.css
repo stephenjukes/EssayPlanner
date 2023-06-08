@@ -1,0 +1,148 @@
+:root {
+  --font-size-medium: 20px;
+  --item-padding: .2rem .5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#container {
+  max-width: 1000px;
+  margin: auto;
+  font-family: Arial;
+  font-size: var(--font-size-medium);
+  padding: 1rem;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+ul ul {
+  padding-inline-start: 1.75rem;
+}
+
+button,
+input {
+  padding: .25rem .75rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  margin: .5rem;
+}
+
+::placeholder {
+  font-style: italic;
+}
+
+section {
+  padding: 1rem;
+}
+
+/* button {
+  margin: 0 .25rem;
+} */
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.pointer, 
+button,
+[type=submit] {
+  cursor: pointer;
+}
+
+.item {
+  position: relative;
+}
+
+.item-content {
+  padding: var(--item-padding);
+  color: #222;
+}
+
+.item-prompt {
+  position: relative;
+}
+
+.item-prompt small {
+  display: none;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-variant: small-caps;
+  color: #aaa;
+  margin-right: .75rem;
+  text-align: right;
+}
+
+.item-delete {
+  display: none;
+  position: absolute;
+  right: 0;
+  height: 1rem;
+  opacity: .25;
+}
+
+.item:hover > .item-delete {
+  display: inline-block;
+}
+
+.item:hover > .item-content {
+  opacity: .7;
+}
+
+.item:hover .item-prompt small {
+  display: block;
+}
+
+.expansion-container {
+  padding: 1px;
+}
+
+.expansion-panel {
+  border: 1px solid black;
+}
+
+.expansion-panel header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: purple;
+  padding: var(--item-padding);
+}
+
+.expansion-panel h3 {
+  font-size: var(--font-size-medium);
+  margin: 0;
+}
+
+.expansion-panel header button {
+  color: inherit;
+  background: inherit;
+  border: none;
+}
+
+.expansion-panel .prompts {
+  padding: 1rem;
+}
+
+.expansion-input-group {
+  display: flex;
+  align-items: flex-end;
+}
+.expansion-input {
+  display: flex;
+}
+
+.expansion-input input[type=submit] {
+  display: none;
+}
